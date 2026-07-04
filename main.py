@@ -4,7 +4,9 @@ import joblib
 import numpy as np
 
 app = FastAPI()
-
+@app.get("/ping")
+def ping():
+    return {"status": "alive"}
 model = joblib.load("grade_predictor_model.pkl")
 
 class PredictionInput(BaseModel):
