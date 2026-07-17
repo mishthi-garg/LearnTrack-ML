@@ -8,7 +8,7 @@ app = FastAPI()
 def ping():
     return {"status": "alive"}
     
-model = joblib.load("grade_predictor_model.pkl")
+model = joblib.load("grade_predictor_model_v2.pkl")
 
 class PredictionInput(BaseModel):
     overall_z: float
